@@ -12,26 +12,28 @@ const ReducerBody = (props) => {
             {props.isCRUD ?
             <>
             <CodeLine tab="0" value={'const SET_'+props.componentName.toUpperCase()+'_LIST = "SET_'+props.componentName.toUpperCase()+'_LIST"'} />
+            {/* <CodeLine tab="0" value="const TEST_CONSTANT = 'TEST_CONSTANT'" />
             <CodeLine tab="0" value="const TEST_CONSTANT = 'TEST_CONSTANT'" />
-            <CodeLine tab="0" value="const TEST_CONSTANT = 'TEST_CONSTANT'" />
-            <CodeLine tab="0" value="const TEST_CONSTANT = 'TEST_CONSTANT'" />
+            <CodeLine tab="0" value="const TEST_CONSTANT = 'TEST_CONSTANT'" /> */}
             </>
             :
             <CodeLine tab="0" value="const TEST_CONSTANT = 'TEST_CONSTANT'" />
             }
             <br />
             <CodeLine tab="0" value="let initialState = {" />
-            <CodeLine tab="1" value="reducerData: null," />
+            <CodeLine tab="1" value={props.componentName[0].toLowerCase()+props.componentName.slice(1)+'List: null,'} />
             <CodeLine tab="0" value="}" />
             <br />
-            <CodeLine tab="0" value="const testReducer = (state = initialState, action) => {" />
+            <CodeLine tab="0" value={'const '+props.componentName[0].toLowerCase()+props.componentName.slice(1)+'Reducer = (state = initialState, action) => {'} />
             <CodeLine tab="1" value="let stateCopy= { ...state }" />
             <CodeLine tab="1" value="switch (action.type) {" />
-            <CodeLine tab="2" value="case TEST_CONSTANT:" />
-            <CodeLine tab="3" value="console.log(action)" />
+            <CodeLine tab="2" value={'case SET_'+props.componentName.toUpperCase()+'_LIST:'} />
+            <CodeLine tab="3" value={'stateCopy.'+props.componentName[0].toLowerCase()+props.componentName.slice(1)+'List = action.'+props.componentName[0].toLowerCase()+props.componentName.slice(1)+'List'} />
             <CodeLine tab="3" value="return stateCopy" />
+            <br/>
             <CodeLine tab="2" value="default:" />
             <CodeLine tab="3" value="return state" />
+            <CodeLine tab="1" value="}" />
             <CodeLine tab="0" value="}" />
             <br />
             {props.isCRUD ?
@@ -48,6 +50,7 @@ const ReducerBody = (props) => {
 
             {props.isCRUD ?
                 <>
+                    <CodeLine tab="0" value="// get all items method: GET" />
                     <CodeLine tab="0" value={'export const get' + props.componentName + 'List = () => {'} />
                     <CodeLine tab="1" value="return (dispatch) => {" />
                     <CodeLine tab="2" value={'testAPI.getAll' + props.componentName + '.then(response => {'} />
@@ -77,7 +80,7 @@ const ReducerBody = (props) => {
                     <CodeLine tab="0" value="}" />
                 </>
             }
-            <CodeLine tab="0" value="export default testReducer" />
+            <CodeLine tab="0" value={'export default '+props.componentName[0].toLowerCase()+props.componentName.slice(1)+'Reducer'} />
         </>
     );
 }

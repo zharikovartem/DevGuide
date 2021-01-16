@@ -46,7 +46,7 @@ const ReactComponent = () => {
                     
                     {state.isApi ? <ApiComponent collapsed /> : null}
                     {state.isReducer ? <ReducerComponent collapsed isCRUD={state.isCRUD} componentName={state.componentName}/> : null}
-                    {store ? <StoreComponent collapsed /> : null}
+                    {store ? <StoreComponent collapsed componentName={state.componentName} /> : null}
 
                     <UrlCopyed
                         value="import { Provider } from 'react-redux';"
@@ -80,12 +80,19 @@ const ReactComponent = () => {
                                 pre="7)"
                             /> */}
 
-                    <StoreComponent collapsed />
+                    {/* <StoreComponent collapsed />
                     <ReducerComponent collapsed />
-                    <ApiComponent collapsed />
+                    <ApiComponent collapsed /> */}
 
                 </Panel>
                 <Panel header="Create React App" key="6-2">
+                    <UrlCopyed
+                        value="npx create-react-app my-app"
+                        descriptions=" - Создать приложение"
+                        pre="1)"
+                    />
+                </Panel>
+                <Panel header="Router" key="6-3">
                     <UrlCopyed
                         value="npx create-react-app my-app"
                         descriptions=" - Создать приложение"
