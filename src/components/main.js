@@ -161,6 +161,9 @@ const ReadMe = () => {
                             />
 
                         </Panel>
+                        <Panel header="Git pages" key="2-2">
+
+                        </Panel>
                     </Collapse>
                 </Panel>
                 <Panel header="Artisan" key="3">
