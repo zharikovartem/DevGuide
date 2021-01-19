@@ -110,6 +110,8 @@ const Git = (props) => {
                     5) npm run deploy
                     <br/>
                     6) commit
+                    <br/>
+                    7) branch: gh-pages
                 </Panel>
             </Collapse>
         </>
