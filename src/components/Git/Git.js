@@ -99,7 +99,7 @@ const Git = (props) => {
                         descriptions=" - Добавляем адрес сайта в package.json"
                         pre="2)"
                     />
-                    3)<br/>
+                    3) Добавляем скрипты в package.json:<br/>
                     <CodeToPackege />
                     
                     <UrlCopyed
@@ -107,11 +107,13 @@ const Git = (props) => {
                         descriptions=" - add it as remote"
                         pre="4)"
                     />
-                    5) npm run deploy
+                    5) branch: gh-pages
                     <br/>
-                    6) commit
+                    6) npm run deploy (Команды в NPM SCRIPTS)
                     <br/>
-                    7) branch: gh-pages
+                    7) commit
+                    
+                    
                 </Panel>
             </Collapse>
         </>

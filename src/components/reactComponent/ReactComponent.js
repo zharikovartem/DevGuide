@@ -99,6 +99,9 @@ const ReactComponent = () => {
                         pre="1)"
                     />
                 </Panel>
+                <Panel header="Deploy TS в Laravel" key="6-4">
+
+                </Panel>
             </Collapse>
 
         </>
