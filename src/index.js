@@ -18,8 +18,8 @@ ReactDOM.render(
         <TabPane tab="Guide" key="1">
           <App />
         </TabPane>
-        <TabPane tab="Dev" key="2">
-
+        <TabPane tab="Components" key="2">
+          вывести список стилизованных компонентов
         </TabPane>
       </Tabs>
       

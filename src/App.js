@@ -1,9 +1,9 @@
-import ReadMe from './components/main';
+import Main from './components/main';
 
 function App() {
   return (
     <div className="App">
-      <ReadMe />
+      <Main />
     </div>
   );
 }

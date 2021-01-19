@@ -43,7 +43,7 @@ const UrlCopyed = (props) => {
     )
 }
 
-const ReadMe = () => {
+const Main = () => {
     const copy = (value) => {
         // console.log(e.target.parentNode)
         navigator.clipboard.writeText(value)
@@ -144,4 +144,4 @@ const ReadMe = () => {
     );
 };
 
-export default ReadMe;
+export default Main;
