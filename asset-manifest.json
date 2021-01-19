@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/epam-app/static/js/main.43d6dbbb.chunk.js",
+    "main.js.map": "/epam-app/static/js/main.43d6dbbb.chunk.js.map",
+    "runtime-main.js": "/epam-app/static/js/runtime-main.ef825a1d.js",
+    "runtime-main.js.map": "/epam-app/static/js/runtime-main.ef825a1d.js.map",
+    "static/css/2.55abb39b.chunk.css": "/epam-app/static/css/2.55abb39b.chunk.css",
+    "static/js/2.f9b49108.chunk.js": "/epam-app/static/js/2.f9b49108.chunk.js",
+    "static/js/2.f9b49108.chunk.js.map": "/epam-app/static/js/2.f9b49108.chunk.js.map",
+    "static/js/3.bfd95fad.chunk.js": "/epam-app/static/js/3.bfd95fad.chunk.js",
+    "static/js/3.bfd95fad.chunk.js.map": "/epam-app/static/js/3.bfd95fad.chunk.js.map",
+    "index.html": "/epam-app/index.html",
+    "static/css/2.55abb39b.chunk.css.map": "/epam-app/static/css/2.55abb39b.chunk.css.map",
+    "static/js/2.f9b49108.chunk.js.LICENSE.txt": "/epam-app/static/js/2.f9b49108.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef825a1d.js",
+    "static/css/2.55abb39b.chunk.css",
+    "static/js/2.f9b49108.chunk.js",
+    "static/js/main.43d6dbbb.chunk.js"
+  ]
+}
