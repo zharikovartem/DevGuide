@@ -1,4 +1,4 @@
-import { DownCircleTwoTone, UpCircleTwoTone } from '@ant-design/icons';
+import { DownCircleTwoTone, FileAddTwoTone, UpCircleTwoTone } from '@ant-design/icons';
 import { Menu, MenuProps } from 'antd';
 import React from 'react'
 
@@ -35,10 +35,11 @@ const ActionsMenu: React.FC<ActionsMenuPropsType> = (props) => {
                     // label: '2nd item',
                     icon: <DownCircleTwoTone />
                 },
-                // {
-                //     key: '3',
-                //     label: '3rd item',
-                // },
+                {
+                    key: '3',
+                    // label: '3rd item',
+                    icon: <FileAddTwoTone />
+                },
             ]}
         />
     )

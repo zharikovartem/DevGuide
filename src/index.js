@@ -16,14 +16,14 @@ ReactDOM.render(
   // <React.StrictMode>
     <div className="container-fluid">
       <Tabs defaultActiveKey="1">
-        <TabPane tab="Guide" key="1">
-          <App />
+      <TabPane tab="Scheduling" key="1">
+          <Scheduling />
         </TabPane>
         <TabPane tab="Components" key="2">
           вывести список стилизованных компонентов
         </TabPane>
-        <TabPane tab="Scheduling" key="3">
-          <Scheduling />
+        <TabPane tab="Guide" key="3">
+          <App />
         </TabPane>
       </Tabs>
       
