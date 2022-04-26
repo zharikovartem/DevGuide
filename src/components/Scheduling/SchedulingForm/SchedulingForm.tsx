@@ -18,6 +18,10 @@ const SchedulingForm: React.FC<SchedulingFormPropsType> = (props) => {
             data = JSON.parse(str)
         }
 
+        if (values.parentIndex === '') {
+            delete values.parentIndex
+        }
+
         data.push(values)
 
         localStorage.setItem('data', JSON.stringify(data));
@@ -43,6 +47,14 @@ const SchedulingForm: React.FC<SchedulingFormPropsType> = (props) => {
                     label="Name"
                     name="name"
                     rules={[{ required: true, message: 'Please input your username!' }]}
+                >
+                    <Input />
+                </Form.Item>
+
+                <Form.Item
+                    label="Parent"
+                    name="parentIndex"
+                    // rules={[{ required: true, message: 'Please input your username!' }]}
                 >
                     <Input />
                 </Form.Item>
