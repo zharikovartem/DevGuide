@@ -51,6 +51,11 @@ const Main = () => {
     }
     return (
         <div>
+            <h3>добавить git user:</h3>
+            <p>
+                <b>git config user.name "zharikovartem"</b><br/>
+                <b>git config user.email "7383125@mail.ru"</b><br/>
+            </p>
             <h3>Данные для SSH:</h3>
             <p>
                 <b>ssh root@81.90.181.175</b> : 74NWWkFFhrGM
