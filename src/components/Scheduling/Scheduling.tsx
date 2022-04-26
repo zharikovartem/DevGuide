@@ -11,7 +11,7 @@ export type ScheduleType = {
 const Scheduling: React.FC = (props: any) => {
 
     const [isOpen, setIsOpen] = useState<boolean>(false)
-    const [data, setData] = useState<ScheduleType[]>(JSON.parse(localStorage.getItem('data')))
+    const [data, setData] = useState<ScheduleType[]>(JSON.parse(localStorage.getItem('data')) ? JSON.parse(localStorage.getItem('data')) : [])
 
     const handleOpen = () => {
 

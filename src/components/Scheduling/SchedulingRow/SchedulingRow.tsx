@@ -8,7 +8,7 @@ const SchedulingRow: React.FC<SchedulingRowPropsType> = (props) => {
 
     const handleDelete = (index: number) => {
         console.log(index)
-        let data: ScheduleType[] = JSON.parse(localStorage.getItem('data'))
+        let data: ScheduleType[] = JSON.parse(localStorage.getItem('data')) ? JSON.parse(localStorage.getItem('data')) : []
         data.splice(index, 1)
         localStorage.setItem('data', JSON.stringify(data));
         props.handleOk()
