@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://zharikovartem.github.io/DevGuide/",
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
