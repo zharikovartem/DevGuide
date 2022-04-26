@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Scheduling from './components/Scheduling/Scheduling'
 
 import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,6 +21,9 @@ ReactDOM.render(
         </TabPane>
         <TabPane tab="Components" key="2">
           вывести список стилизованных компонентов
+        </TabPane>
+        <TabPane tab="Scheduling" key="3">
+          <Scheduling />
         </TabPane>
       </Tabs>
       
