@@ -27,7 +27,7 @@ const Scheduling: React.FC = (props: any) => {
     }
 
     const handleOk = () => {
-        
+
         isOpen && setIsOpen(false)
         const updatedData = createSchedulingTree(JSON.parse(localStorage.getItem('data')))
 
@@ -39,20 +39,20 @@ const Scheduling: React.FC = (props: any) => {
 
     return (
         <>
+            <Row>
+                <Col span={20}>Scheduling</Col>
+                <Col span={4}><Button onClick={() => { setIsOpen(true) }} type='primary'>Add</Button></Col>
+            </Row>
+
             <List
                 size="small"
-                header={
-                    <Row>
-                        <Col span={20}>Scheduling</Col>
-                        <Col span={4}><Button onClick={() => { setIsOpen(true) }} type='primary'>Add</Button></Col>
+                // header={
 
-                    </Row>
-                }
-                footer={<Pagination defaultCurrent={1} total={50} />}
+                // }
+                // footer={<Pagination defaultCurrent={1} total={50} />}
                 bordered
                 dataSource={data}
-                renderItem={(item: ScheduleType, index: number) => <SchedulingRowWraper item={item} index={index} handleOk={handleOk}/>}
-            // pagination={true}
+                renderItem={(item: ScheduleType, index: number) => <SchedulingRowWraper item={item} index={index} handleOk={handleOk} />}
             />
 
             <SchedulingForm

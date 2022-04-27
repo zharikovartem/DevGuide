@@ -5,6 +5,7 @@ import { ScheduleType } from '../Scheduling'
 import ActionsMenu from './ActionsMenu'
 
 import useCollapse from 'react-collapsed'
+import SchedulingList from '../SchedulingList/SchedulingList'
 
 const { Panel } = Collapse
 
@@ -79,7 +80,10 @@ const SchedulingRow: React.FC<SchedulingRowPropsType> = (props) => {
                         transitionLeaveTimeout={300}
                     > */}
 
-                    <List></List>
+                    <SchedulingList
+                        data={props.item.childs}
+                        handleOk={props.handleOk}
+                    />
 
                     {/* </ReactCSSTransitionGroup> */}
 
