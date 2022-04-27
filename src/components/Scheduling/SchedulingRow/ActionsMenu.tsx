@@ -10,7 +10,8 @@ const ActionsMenu: React.FC<ActionsMenuPropsType> = (props) => {
         console.log('click', e);
         console.log('key', e.key);
 
-        let newData = createSchedulingTree(JSON.parse(localStorage.getItem('data')))
+        // let newData = createSchedulingTree(JSON.parse(localStorage.getItem('data')))
+        let newData = JSON.parse(localStorage.getItem('data'))
         console.log('newData', [...newData]);
 
         switch (e.key) {
@@ -33,8 +34,7 @@ const ActionsMenu: React.FC<ActionsMenuPropsType> = (props) => {
                     return 0;
                 })
 
-                console.log(newData)
-
+                console.log('localStorage.setItem', newData)
                 localStorage.setItem('data', JSON.stringify(newData));
                 props.onUpdate()
                 break;
@@ -66,7 +66,7 @@ const ActionsMenu: React.FC<ActionsMenuPropsType> = (props) => {
                     return 0;
                 })
 
-                console.log(newData)
+                console.log('localStorage.setItem', newData)
 
                 localStorage.setItem('data', JSON.stringify(newData));
                 props.onUpdate()

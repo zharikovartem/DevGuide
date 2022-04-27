@@ -24,6 +24,7 @@ const SchedulingForm: React.FC<SchedulingFormPropsType> = (props) => {
 
         data.push(values)
 
+        console.log('localStorage.setItem', data)
         localStorage.setItem('data', JSON.stringify(data));
         props.handleOk()
     };
