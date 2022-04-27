@@ -1,4 +1,4 @@
-import { Button, Col, List, Pagination, Row } from 'antd'
+import { Button, Col, List, Pagination, Popconfirm, Row } from 'antd'
 import React, { useState } from 'react'
 import TestComp from '../../typescript/TestComp'
 import SchedulingForm from './SchedulingForm/SchedulingForm'
@@ -39,9 +39,26 @@ const Scheduling: React.FC = (props: any) => {
 
     return (
         <>
-            <Row>
-                <Col span={20}>Scheduling</Col>
-                <Col span={4}><Button onClick={() => { setIsOpen(true) }} type='primary'>Add</Button></Col>
+            <Row className='my-3'>
+                <Col span={12}><h3>Scheduling</h3></Col>
+                <Col span={12}>
+                    <Button className='mx-2' onClick={() => { setIsOpen(true) }} type='primary'>Add</Button>
+                    <Popconfirm
+                        title="Are you sure to delete all tasks?"
+                        onConfirm={()=>{localStorage.removeItem('data')}}
+                        onCancel={()=>{}}
+                        okText="Yes"
+                        cancelText="No"
+                    >
+                        <Button 
+                            // className='mx-1' 
+                            // onClick={()=>{localStorage.removeItem('data')}} 
+                            danger
+                        >
+                            Clear
+                        </Button>
+                    </Popconfirm>
+                </Col>
             </Row>
 
             <List
