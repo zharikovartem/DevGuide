@@ -9,6 +9,7 @@ import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Tabs } from 'antd';
+import Data from './components/Data/Data';
 
 const { TabPane } = Tabs;
 
@@ -24,6 +25,9 @@ ReactDOM.render(
         </TabPane>
         <TabPane tab="Guide" key="3">
           <App />
+        </TabPane>
+        <TabPane tab="Data" key="4">
+          <Data />
         </TabPane>
       </Tabs>
       

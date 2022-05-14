@@ -8,7 +8,8 @@ import SchedulingRowWraper from './SchedulingRow/SchedulingRowWraper'
 
 export type ScheduleType = {
     name: string
-    index?: string
+    id: string
+    // index?: string
     parentIndex?: string
     childs?: ScheduleType[]
     pp?: string

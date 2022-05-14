@@ -72,6 +72,10 @@ const ActionsMenu: React.FC<ActionsMenuPropsType> = (props) => {
                 props.onUpdate()
                 break;
 
+            case '3':
+                alert('add subtask')
+                break;
+
             default:
                 break;
         }

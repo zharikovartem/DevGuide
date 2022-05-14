@@ -15,14 +15,14 @@ export const createSchedulingTree = (schedulingArray: SchedulingArrayType, targe
         if (item.parentIndex === targetIndex) {
             response.push({
                 ...item,
-                index: item.index ? item.index : index.toString(),
+                // index: item.index ? item.index : index.toString(),
                 pp: index.toString()
             })
         } else {
             // console.log(item)
             childs.push({
                 ...item,
-                index: item.index ? item.index : index.toString(),
+                // index: item.index ? item.index : index.toString(),
                 pp: index.toString()
             })
             
@@ -35,7 +35,7 @@ export const createSchedulingTree = (schedulingArray: SchedulingArrayType, targe
         response.filter( (resItem, resIndex) => {
             // return resItem.index === item)[0].childs = createSchedulingTree(childs, item)
             // console.log('!!!',resItem.index, item)
-            if (resItem.index === item) {
+            if (resItem.id === item) {
                 response[resIndex].childs = createSchedulingTree(childs, item)
                 // console.log('!!!', resItem)
             }

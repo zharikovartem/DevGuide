@@ -34,35 +34,55 @@ const SchedulingRow: React.FC<SchedulingRowPropsType> = (props) => {
             <List.Item className='w-100'>
                 <Row className='w-100'>
                     <Col span={2}>
-                        <Row >
-                            <Col span={6}>
-                                <p className='pt-2'>{parseInt(props.item.index) + 1}.</p>
-                            </Col>
-                            <Col span={6}>
-                                {props.item.childs &&
-                                    // @ts-ignore
-                                    <Button 
-                                        {...getToggleProps()}
-                                        shape="circle"
-                                        // @ts-ignore
-                                        type='text'
-                                        className='p-0'
-                                        
-                                    >
-                                        {isExpanded ? <DownCircleTwoTone style={{fontSize: 14}} /> : <RightCircleTwoTone />}
-                                    </Button>
-                                }
-                            </Col>
-                        </Row>
+                        {props.item.childs ?
+                            <Row >
+                                <Col span={6}>
+                                    <span className='pt-2'>{parseInt(props.item.pp) + 1}.</span>
+                                </Col>
+                                <Col span={6}>
+                                    {props.item.childs &&
+                                        <Button
+                                            {...getToggleProps()}
+                                            shape="circle"
+                                            // @ts-ignore
+                                            type='text'
+                                            className='p-0 mr-1'
+                                            style={{top: -8}}
+                                        >
+                                            {isExpanded ?   
+                                                <DownCircleTwoTone 
+                                                    // style={{ fontSize: 14 }} 
+                                                /> 
+                                                : 
+                                                <RightCircleTwoTone />
+                                            }
+                                        </Button>
+                                    }
+                                </Col>
+                            </Row>
+                            :
+                            <span className='pt-2'>{parseInt(props.item.pp) + 1}.</span>
+                        }
                     </Col>
-                    <Col span={16}><p className='pt-2'>{props.item.name}</p></Col>
+                    <Col className='ml-2' span={16}>
+                        <span className='pt-2'>{props.item.name}</span>
+                    </Col>
                     <Col span={4}>
                         <Row >
                             <Col span={6}>
-                                <Button onClick={() => { handleDelete(props.item.index) }} shape="circle" icon={<DeleteTwoTone />} />
+                                <Button onClick={() => { handleDelete(props.item.id) }} shape="circle" icon={<DeleteTwoTone />} />
                             </Col>
                             <Col span={6}>
-                                <Dropdown.Button overlay={<ActionsMenu onUpdate={()=>{props.handleOk()}} item={props.item}/>} ></Dropdown.Button>
+                                <Dropdown.Button 
+                                    overlay={
+                                        <ActionsMenu 
+                                            onUpdate={() => {
+                                                console.log('onAction!!!')
+                                                props.handleOk() 
+                                            }} 
+                                            item={props.item} />
+                                    } >
+                                </Dropdown.Button>
                             </Col>
                         </Row>
                     </Col>
