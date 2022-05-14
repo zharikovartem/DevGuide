@@ -2,7 +2,7 @@
 
 git pull
 
-npm run deploy
+npm run deploy # билдит gh-pages
 
 read -p "Нужен ли git push? y/n:   > " isGitPush
 if [[ ${isGitPush} == "y" ]]
