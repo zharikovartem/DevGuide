@@ -115,6 +115,18 @@ const Git = (props) => {
                     
                     
                 </Panel>
+                <Panel header="Git stash" key="2-4">
+                    <UrlCopyed
+                        value="git stash"
+                        descriptions=" - Команда git stash сохраняет неподтвержденные изменения (индексированные и неиндексированные) в отдельном хранилище"
+                        pre="1)"
+                    />
+                    <UrlCopyed
+                        value="git stash pop"
+                        descriptions=" - Применить ранее отложенные изменения"
+                        pre="2)"
+                    />
+                </Panel>
             </Collapse>
         </>
 

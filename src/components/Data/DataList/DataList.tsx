@@ -45,12 +45,6 @@ const DataList: React.FC<DataListPropsType> = (props) => {
 
     return (
         <>
-            {props.data.map((item) => {
-                return (
-                    <li>{item.name}</li>
-                )
-            })}
-
             <Table columns={columns} dataSource={props.data} />
         </>
     )

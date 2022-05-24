@@ -2,6 +2,7 @@ import { Button, Col, List, Pagination, Popconfirm, Row } from 'antd'
 import React, { useState } from 'react'
 import TestComp from '../../typescript/TestComp'
 import SchedulingForm from './SchedulingForm/SchedulingForm'
+import SchedulingModal from './SchedulingForm/SchedulingModal'
 import { createSchedulingTree } from './SchedulingHelper'
 import SchedulingRow from './SchedulingRow/SchedulingRow'
 import SchedulingRowWraper from './SchedulingRow/SchedulingRowWraper'
@@ -73,7 +74,7 @@ const Scheduling: React.FC = (props: any) => {
                 renderItem={(item: ScheduleType, index: number) => <SchedulingRowWraper item={item} index={index} handleOk={handleOk} />}
             />
 
-            <SchedulingForm
+            <SchedulingModal
                 handleCancel={() => { setIsOpen(false) }}
                 handleOk={handleOk}
                 isOpen={isOpen}
