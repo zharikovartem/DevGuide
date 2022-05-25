@@ -127,7 +127,7 @@ const Git = (props) => {
                         pre="2)"
                     />
                 </Panel>
-                <Panel header="Измненить https на ssh" key="2-4">
+                <Panel header="Измненить https на ssh" key="2-5">
                     <UrlCopyed
                         value="git remote -v"
                         descriptions=" - Узнать как сейчас осуществлено подключение"
