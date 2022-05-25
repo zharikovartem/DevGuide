@@ -127,6 +127,18 @@ const Git = (props) => {
                         pre="2)"
                     />
                 </Panel>
+                <Panel header="Измненить https на ssh" key="2-4">
+                    <UrlCopyed
+                        value="git remote -v"
+                        descriptions=" - Узнать как сейчас осуществлено подключение"
+                        pre="1)"
+                    /> 
+                    <UrlCopyed
+                        value="git remote set-url origin git@gitlab.com:krios_group/befree_front.git"
+                        descriptions=" - Изменить ссылку для подключения"
+                        pre="1)"
+                    />
+                </Panel>
             </Collapse>
         </>
 
