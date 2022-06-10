@@ -8,6 +8,7 @@ import ApiComponent from './files/ApiComponent';
 import ReactComponent from './reactComponent/ReactComponent';
 import Laravel from './Laravel/Laravel';
 import Git from './Git/Git';
+import Redmine from './Redmine/Redmine';
 
 const { Panel } = Collapse;
 

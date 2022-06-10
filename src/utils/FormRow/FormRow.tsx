@@ -54,6 +54,7 @@ const FormRow: React.FC<FormRowPropsType> = (props) => {
                     label={props.label}
                     hasFeedback
                     styled={{ with: '100%' }}
+                    onChange={props.onChange}
                 >
                     {getContent()}
                 </Field>
@@ -78,4 +79,5 @@ type FormRowPropsType = {
     submitCount?: any
     isButton?: boolean
     selectOptions?: any[]
+    onChange?: (data: any)=>void
 }

@@ -1,11 +1,11 @@
 import {Action, applyMiddleware, combineReducers, createStore} from "redux"
 import thunkMiddleware, {ThunkAction} from "redux-thunk"
 import dataReducer from "./dataReducer"
-
-
+import redmineReducer from "./redmineReducer"
 
 let rootReducer = combineReducers({
-    dataReducer: dataReducer
+    dataReducer: dataReducer,
+    redmineReducer: redmineReducer
 })
 
 type rootReducerType = typeof rootReducer
